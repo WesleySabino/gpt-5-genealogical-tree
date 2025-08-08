@@ -14,6 +14,7 @@ i18n
           addSibling: 'Add sibling',
           addSpouse: 'Add spouse',
           export: 'Export',
+          import: 'Import',
           rootPerson: 'Root Person',
           newPerson: 'New person',
           treeCanvas: 'Tree canvas',
