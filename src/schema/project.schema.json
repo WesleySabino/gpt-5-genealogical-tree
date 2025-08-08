@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Project",
+  "type": "object",
+  "properties": {
+    "persons": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/person" }
+    },
+    "relationships": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/relationship" }
+    },
+    "events": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/event" }
+    }
+  },
+  "definitions": {
+    "person": {
+      "type": "object",
+      "required": ["id", "names"],
+      "properties": {
+        "id": { "type": "string" },
+        "names": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "relationship": {
+      "type": "object",
+      "required": ["id", "type", "persons"],
+      "properties": {
+        "id": { "type": "string" },
+        "type": { "type": "string" },
+        "persons": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "required": ["id", "type"],
+      "properties": {
+        "id": { "type": "string" },
+        "type": { "type": "string" }
+      }
+    }
+  }
+}
